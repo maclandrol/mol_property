@@ -1,32 +1,28 @@
 # from distutils.core import setup
 from setuptools import setup
+from setuptools import find_packages
 
-setup(name="mol_property",
-      version="1.0.0",
-      description="Prediction of pKa from chemical structure using machine learning approaches",
-      long_description=open('README.md', encoding='utf-8').read(),
-      author="Chin",
-      author_email="chin340823@163.com",
-      url="https://github.com/TVect/mol_property",
-      packages=['mol_property', 
-                'mol_property.pka', 
-                'mol_property.solubility', 
-                'mol_property.similarity'],
-      package_data={'mol_property': ["mol_property/pka/model/*.pkl",
-                                     "mol_property/similarity/save/*.zip"]},
-      include_package_data=True,
-      #install_requires=['numpy>=1.16.3',
-      #                  'pandas>=0.24.2',
-      #                  'rdkit>=2009.Q1-1',
-      #                  'scikit_learn==0.21.1',
-      #                  'xgboost==0.81',
-      #                  'bitarray==1.0.1',
-      #                  'faiss==1.5.1',
-      #                  'tqdm==4.32.1'],
-      classifiers=['Development Status :: 2 - Pre-Alpha', 
-                   'License :: OSI Approved :: MIT License',
-                   'Programming Language :: Python :: 3.6',
-                   'Topic :: Scientific/Engineering :: Chemistry'],
-      zip_safe=False,
-) 
-
+setup(
+    name="mol_property",
+    version="1.0.0",
+    description="Prediction of pKa from chemical structure using machine learning approaches",
+    long_description=open("README.md", encoding="utf-8").read(),
+    author="Chin",
+    author_email="chin340823@163.com",
+    url="https://github.com/TVect/mol_property",
+    packages=find_packages(),
+    package_data={
+        "mol_property": [
+            "mol_property/pka/model/*.pkl",
+            "mol_property/similarity/save/*.zip",
+        ]
+    },
+    include_package_data=True,
+    classifiers=[
+        "Development Status :: 2 - Pre-Alpha",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3.6",
+        "Topic :: Scientific/Engineering :: Chemistry",
+    ],
+    zip_safe=False,
+)
