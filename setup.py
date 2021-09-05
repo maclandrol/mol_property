@@ -13,7 +13,7 @@ setup(
     packages=find_packages(),
     package_data={
         "mol_property": [
-            "mol_property/pka/model/*.pkl",
+            "mol_property/model/*.pkl",
             "mol_property/similarity/save/*.zip",
         ]
     },

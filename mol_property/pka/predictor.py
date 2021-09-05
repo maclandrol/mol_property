@@ -9,7 +9,7 @@ from mol_property.pka.data_utils import DataUtils
 class PkaPredictor(object):
     def __init__(
         self,
-        model_dir=os.path.join(os.path.dirname(__file__), "model"),
+        model_dir=os.path.join(os.path.dirname(__file__), "../model"),
         feature_type="morgan+macc",
         allow_multilabel=True,
     ):

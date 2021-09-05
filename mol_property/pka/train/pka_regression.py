@@ -66,5 +66,7 @@ print("test:", model_evaluation(reg.best_estimator_, X_test, y_test))
 
 joblib.dump(
     reg.best_estimator_,
-    "model/pka_{}_regression.pkl".format(DATA_CATEGORY.split("_")[0]),
+    os.path.join(
+        cur_dir, "../../model/pka_{}_regression.pkl".format(DATA_CATEGORY.split("_")[0])
+    ),
 )

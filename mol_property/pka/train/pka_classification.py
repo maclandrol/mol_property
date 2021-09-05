@@ -95,6 +95,10 @@ print(clf.best_params_)
 print("train:", model_evaluation(clf.best_estimator_, X_train, y_train))
 print("test:", model_evaluation(clf.best_estimator_, X_test, y_test))
 if multilabel:
-    joblib.dump(clf.best_estimator_, "model/pka_classification.pkl")
+    joblib.dump(
+        clf.best_estimator_, os.path.join(cur_dir, "../../model/pka_classification.pkl")
+    )
 else:
-    clf.best_estimator_.save_model("model/pka_classification.txt")
+    clf.best_estimator_.save_model(
+        os.path.join(cur_dir, "../../model/pka_classification.txt")
+    )
