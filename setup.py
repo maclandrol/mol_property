@@ -14,6 +14,7 @@ setup(
     package_data={
         "mol_property": [
             "mol_property/model/*.pkl",
+            "mol_property/model/*.txt",
             "mol_property/similarity/save/*.zip",
         ]
     },
