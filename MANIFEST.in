@@ -1,3 +1,4 @@
 include mol_property/model/*.pkl
 include mol_property/model/*.json
+include mol_property/model/*.txt
 include mol_property/similarity/save/*.zip
