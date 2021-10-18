@@ -80,12 +80,11 @@ def main(data, output, seed, cv, feat):
     params = {
         "estimator__max_depth": [4, 8, 10, 15],
         "estimator__objective": ["binary:logistic"],
-        "estimator__n_estimators": [50, 100, 200, 400],
-        "estimator__subsample": [0.5, 0.7, 0.8, 0.9, 1.0],
-        "estimator__colsample_bytree": [0.5, 0.75, 0.8, 0.9, 1.0],
-        "estimator__eta": [5e-4, 1e-3, 0.01, 0.05, 0.1, 0.2, 0.5],
+        "estimator__n_estimators": [50, 100, 300],
+        "estimator__subsample": [0.5, 0.75, 1.0],
+        "estimator__colsample_bytree": [0.5, 0.75, 1.0],
+        "estimator__eta": [1e-3, 0.01, 0.1, 0.2, 0.5],
         "estimator__booster": ["gbtree"],
-        "estimator__min_child_weight": list(np.arange(1, 10, 1)),
     }
 
     clf = GridSearchCV(xgb_model, params, verbose=3, n_jobs=-1, cv=cv)
